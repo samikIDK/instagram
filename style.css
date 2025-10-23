@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #000000;
+    background: #000;
     display: flex;
     justify-content: center;
 }
@@ -10,10 +10,18 @@ body {
     margin-top: 20px;
 }
 
+.post {
+    background: #111;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
 .post-up {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     padding: 10px;
 }
 
@@ -23,9 +31,16 @@ body {
     border-radius: 50%;
 }
 
+.post-up div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .username {
     font-weight: bold;
     margin: 0;
+    color: #fff;
 }
 
 .date {
@@ -37,31 +52,47 @@ body {
 .main-img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .post-down {
     padding: 10px;
-    border-bottom: 1px solid #888888;
-    padding-bottom: 30px;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
 }
 
 .icons {
-    font-size: 20px;
-    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.left-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.icons img {
+    width: 24px;
+    cursor: pointer;
 }
 
 .likes {
     font-weight: bold;
+    color: #fff;
+    margin: 4px 0;
 }
 
 .caption {
+    color: #fff;
     margin-top: 5px;
 }
 
 .comment {
     font-size: 14px;
     margin-top: 4px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .comment-author {
@@ -69,5 +100,6 @@ body {
 }
 
 p {
-    color: #ffffff;
+    color: #fff;
+    margin: 0;
 }
