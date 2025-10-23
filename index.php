@@ -62,6 +62,38 @@ $posts = [
         ],
 ];
 $menu = [
+        "home" => [
+                "text" => "Home",
+                "icon" => "imgs/home.png",
+        ],
+        "search" => [
+                "text" => "Search",
+                "icon" => "imgs/search.png",
+        ],
+        "explore" => [
+                "text" => "Explore",
+                "icon" => "imgs/explore.png",
+        ],
+        "reels" => [
+                "text" => "Reels",
+                "icon" => "imgs/reels.png",
+        ],
+        "messages" => [
+                "text" => "Messages",
+                "icon" => "imgs/share_button.png",
+        ],
+        "notifications" => [
+                "text" => "Notifications",
+                "icon" => "imgs/heart.png",
+        ],
+        "create" => [
+                "text" => "Create",
+                "icon" => "imgs/make.png",
+        ],
+        "profile" => [
+                "text" => "Profile",
+                "icon" => "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/z/u/Zugpsitze_mountain.jpg?crop=0%2C176%2C3008%2C1654&wid=1300&hei=715&scl=2.313846153846154",
+        ]
 
 ]
 
@@ -75,6 +107,20 @@ $menu = [
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="side-menu">
+    <div class="logo">
+        <img src="imgs/logo.png" alt="IG logo">
+    </div>
+    <div class="menu">
+        <?php foreach ($menu as $item): ?>
+            <div class="menu-item">
+                <img src="<?= $item['icon'] ?>" alt="<?= $item['text'] ?>">
+                <span><?= $item['text'] ?></span>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</nav>
+
 <div class="posts">
     <?php foreach ($posts as $post): ?>
         <div class="post">
